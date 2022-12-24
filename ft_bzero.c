@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 17:38:02 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 18:01:38 by sabdulqa         ###   ########.fr       */
+/*   Created: 2022/12/24 18:30:53 by sabdulqa          #+#    #+#             */
+/*   Updated: 2022/12/24 18:37:56 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 
-#include <stdio.h>
-
-char	*ft_strchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-
-	if (!s)
-		return (0);
+	size_t	i;
+	
+	if (n == 0)
+		return;
+	
 	i = 0;
-	while (s[i])
+	while (i < n)
 	{
-		if (s[i] == (char)c)
-			return ((char*)(s + i));
+		*(char *) (s + i) = 0;
 		i++;
 	}
-	if (s[i] == (char)c)
-		return ((char*)(s + i));
-	return (0);
+	
 }
-
-// int	main()
-// {
-// 	printf("%s\n", ft_strchr("salman", 's'));
-// 	return 0;
-// }

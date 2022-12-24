@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 17:38:02 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 18:01:38 by sabdulqa         ###   ########.fr       */
+/*   Created: 2022/12/24 18:44:18 by sabdulqa          #+#    #+#             */
+/*   Updated: 2022/12/24 20:12:56 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include <string.h>
 #include <stdio.h>
-
-char	*ft_strchr(const char *s, int c)
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	int	i;
+	size_t	i;
 
-	if (!s)
-		return (0);
+	if (!dst)
+		return (NULL);
 	i = 0;
-	while (s[i])
+	while (i < n)
 	{
-		if (s[i] == (char)c)
-			return ((char*)(s + i));
+		*(char *)(dst + i) = *(char *)(src + i);
 		i++;
 	}
-	if (s[i] == (char)c)
-		return ((char*)(s + i));
-	return (0);
+	return dst;
+	
 }
 
-// int	main()
-// {
-// 	printf("%s\n", ft_strchr("salman", 's'));
-// 	return 0;
+// int main(){
+// 	char s1[50] = "Learningisfun";
+// 	char s2[50] = "Learningisfun";
+// 	char s3[50] = "Learningisfun";
+	
+// 	printf("%s\n", memcpy(s1, s3, 3));
+// 	printf("%s\n", memmove(s2, s3, 3)); 
 // }

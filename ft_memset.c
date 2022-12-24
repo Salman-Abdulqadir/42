@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 17:38:02 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 18:01:38 by sabdulqa         ###   ########.fr       */
+/*   Created: 2022/12/24 18:18:08 by sabdulqa          #+#    #+#             */
+/*   Updated: 2022/12/24 18:29:53 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+void *ft_memset(void *b, int c, size_t len)
 {
-	int	i;
-
-	if (!s)
-		return (0);
+	size_t	i;
+	
 	i = 0;
-	while (s[i])
+	while (i < len)
 	{
-		if (s[i] == (char)c)
-			return ((char*)(s + i));
+		*(unsigned char*)(b + i) = (unsigned char) c;
 		i++;
 	}
-	if (s[i] == (char)c)
-		return ((char*)(s + i));
-	return (0);
+	
+	return (b);
 }
-
-// int	main()
-// {
-// 	printf("%s\n", ft_strchr("salman", 's'));
-// 	return 0;
-// }
