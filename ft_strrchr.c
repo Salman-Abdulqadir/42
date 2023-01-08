@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 16:20:27 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/01/08 16:26:58 by sabdulqa         ###   ########.fr       */
+/*   Created: 2023/01/08 14:43:22 by sabdulqa          #+#    #+#             */
+/*   Updated: 2023/01/08 17:07:41 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	int		i;
+	char	*pointer;
+
+	i = 0;
+	pointer = 0;
+	while (s[i])
+	{
+		if (s[i] == (unsigned char) c)
+			pointer = (char *)(s + i);
+		i++;
+	}
+	if (s[i] == c)
+		pointer = (char *)(s + i);
+	return (pointer);
 }

@@ -6,7 +6,7 @@
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:51:59 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/01/08 13:24:49 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/01/08 18:30:10 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 
 char			*ft_itoa(int n);
-
-void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 void			*ft_memchr(const void *s, int c, size_t n);
 
