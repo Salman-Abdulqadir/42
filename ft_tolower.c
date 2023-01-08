@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:32:29 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 17:40:47 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:23:18 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return c + 32;
-	return c;
+		return (c + 32);
+	return (c);
 }

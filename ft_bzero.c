@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 18:30:53 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 18:37:56 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:22:41 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	
+
 	if (n == 0)
-		return;
-	
+		return ;
 	i = 0;
 	while (i < n)
 	{
-		*(char *) (s + i) = 0;
+		*(char *)(s + i) = 0;
 		i++;
 	}
-	
 }

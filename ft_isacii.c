@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isacii.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 16:23:04 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 17:39:41 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:22:47 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isacii(int c)
+int	ft_isacii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }

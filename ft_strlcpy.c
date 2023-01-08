@@ -1,26 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 18:18:08 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/01/08 13:23:04 by sabdulqa         ###   ########.fr       */
+/*   Created: 2023/01/08 11:48:37 by sabdulqa          #+#    #+#             */
+/*   Updated: 2023/01/08 12:13:43 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	if (dstsize == 0)
 	{
-		*(unsigned char *)(b + i) = (unsigned char) c;
+		while (src[i])
+			i++;
+		return (i);
+	}
+	while (i < dstsize - 1 && src[i])
+	{
+		dst [i] = src [i];
 		i++;
 	}
-	return (b);
+	dst[i] = '\0';
+	while (src[i])
+		i++;
+	return (i);
 }
+
+// int main()
+// {
+// 	char *src = "Coding is fun!";
+// 	char dest[12];
+
+// 	ft_strlcpy(dest, src, 12);
+// 	printf("%s\n", dest);
+// }

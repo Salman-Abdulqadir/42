@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:38:02 by sabdulqa          #+#    #+#             */
-/*   Updated: 2022/12/24 18:01:38 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/01/08 13:23:08 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <stdio.h>
 
@@ -23,11 +22,11 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i++;
 	}
 	if (s[i] == (char)c)
-		return ((char*)(s + i));
+		return ((char *)(s + i));
 	return (0);
 }
 
