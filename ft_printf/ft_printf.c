@@ -6,7 +6,7 @@
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 13:21:31 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/11 15:37:29 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/24 09:30:50 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int check_placeholder(char format, args)
 int main(){
 	char test = 's';
 
-	ft_printf("my name is %c", test);
+	printf("%d\n", ft_printf("%d %s %x %d %x", 4564564,  "hgfhgfhgfhgf", -52456456, -56454, 5645645 );
+	printf("%d\n",    printf("%d %s %x %d %x", 4564564,  "hgfhgfhgfhgf", -52456456, -56454, 5645645 );
 	return 0;
 }

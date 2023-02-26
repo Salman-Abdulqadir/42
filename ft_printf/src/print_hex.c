@@ -6,7 +6,7 @@
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:35:53 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/11 15:37:51 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/24 09:43:40 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	print_hex(int	c)
 		return ;
 	}
 	else
-		ft_putnbr_fd(n / 10, fd);
-	ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(n / 16, fd);
+	ft_putnbr_fd(n % 16, fd);
 }
 }

@@ -6,19 +6,19 @@
 #    By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 13:59:37 by sabdulqa          #+#    #+#              #
-#    Updated: 2023/02/11 14:38:53 by sabdulqa         ###   ########.fr        #
+#    Updated: 2023/02/24 09:54:59 by sabdulqa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_itoa.c  ft_putendl_fd.c ft_putchar_fd ft_putnbr_fd.c \
-					ft_putstr_fd.c  
+SRCS			=	ft_putchar_fd.c ft_itoa.c  ft_putendl_fd.c  ft_putnbr_fd.c \
+					ft_putstr_fd.c  ft_strlen.c
 OBJS			= $(SRCS:.c=.o)
 
-BONUS_OBJS		= $(BONUS:.c=.o)
+
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror -c
 
 NAME			= libft.a
 
