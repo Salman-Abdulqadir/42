@@ -6,11 +6,11 @@
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:35:53 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/26 15:42:06 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/26 17:07:06 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	print_hex(unsigned int n, char type)
 {

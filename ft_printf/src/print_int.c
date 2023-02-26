@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 14:48:54 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/24 11:34:30 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/26 17:07:13 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	print_int(int c)
 {
