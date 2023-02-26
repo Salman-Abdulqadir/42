@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 13:42:44 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/26 16:27:27 by sabdulqa         ###   ########.fr       */
+/*   Created: 2022/12/24 16:31:17 by sabdulqa          #+#    #+#             */
+/*   Updated: 2023/01/17 21:04:51 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "./libft/libft.h"
-#include <stdarg.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-int	print_char(char c);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
-int	print_hex(unsigned int	n, char type);
-
-int	print_int(int c);
-
-int	print_str(char *str);
-int	print_ptr(void *ptr);
-
-void			ft_putstr_fd(char *s, int fd);
-
-size_t			ft_strlen(const char *s);
-
-#endif
+// int main(){
+//     printf("%d\n", ft_strlen("salman1234@@@@"));
+//     return 0;
+// }

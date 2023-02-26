@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 13:42:44 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/26 16:27:27 by sabdulqa         ###   ########.fr       */
+/*   Created: 2023/01/17 18:05:17 by sabdulqa          #+#    #+#             */
+/*   Updated: 2023/01/17 18:08:39 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "./libft/libft.h"
-#include <stdarg.h>
-
-int	print_char(char c);
-
-int	print_hex(unsigned int	n, char type);
-
-int	print_int(int c);
-
-int	print_str(char *str);
-int	print_ptr(void *ptr);
-
-void			ft_putstr_fd(char *s, int fd);
-
-size_t			ft_strlen(const char *s);
-
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+	return ;
+}

@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 13:42:44 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/26 16:27:27 by sabdulqa         ###   ########.fr       */
+/*   Created: 2022/12/24 17:51:59 by sabdulqa          #+#    #+#             */
+/*   Updated: 2023/02/11 14:36:59 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "./libft/libft.h"
-#include <stdarg.h>
 
-int	print_char(char c);
+char			*ft_itoa(int n);
 
-int	print_hex(unsigned int	n, char type);
+void			ft_putchar_fd(char c, int fd);
 
-int	print_int(int c);
+void			ft_putendl_fd(char *s, int fd);
 
-int	print_str(char *str);
-int	print_ptr(void *ptr);
+void			ft_putnbr_fd(int n, int fd);
 
 void			ft_putstr_fd(char *s, int fd);
 
