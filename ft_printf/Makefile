@@ -3,61 +3,41 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+         #
+#    By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 12:40:19 by sabdulqa          #+#    #+#              #
-#    Updated: 2023/01/21 12:40:23 by sabdulqa         ###   ########.fr        #
+#    Updated: 2023/02/24 11:33:29 by sabdulqa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-DIRSRC		= ./srcs/
+LIBFT = libft/libft.a
 
-DIRINC		= ./includes/
+NAME = libftprintf.a
 
-DIROBJ		= ./objs/
+SRCS =  print_char.c print_hex.c print_int.c print_str.c 
+		
+CC = gcc
 
-DIRLIB		= ./libft/
+CFLAGS = -c -Wall -Wextra -Werror
 
-SRC			= ft_printf parser writer formater formater_d formater_u formater_x formater_c formater_s formater_p formater_pe
+INCLUDES = -I./includes
 
-SRCS		= $(addprefix ${DIRSRC}, $(addsuffix .c, ${SRC}))
+OBJS = $(SRCS:.c=.o)
 
-HEAD		= ./includes/ 
+$(NAME): $(OBJS)
+	$(MAKE) -C ./libft
+	cp libft/libft.a $(NAME)
+	ar -rcs $(NAME) $(OBJS)
 
-OBJS		= ${SRCS:.c=.o}
+all : $(NAME)
 
-NAME		= libftprintf.a
+clean :
+	$(MAKE) clean -C ./libft
+	rm -rf $(SURPL_O) 
+	rm -rf $(OBJS)
 
-NAMELFT		= libft.a
+fclean : clean
+	$(MAKE) fclean -C ./libft
+	rm -rf $(NAME)
 
-CC			= gcc
-RM			= rm -f
-AR			= ar rc
-RN			= ranlib
-
-CFLAGS		= -Wall -Wextra -Werror
-
-.c.o:
-			${CC} ${CFLAGS} -c -I${DIRINC} -I${DIRLIB} $< -o ${<:.c=.o}
-
-$(NAME):	${OBJS}
-			cd ${DIRLIB} && ${MAKE} && cp -v ${NAMELFT} ../${NAME}
-			${AR} ${NAME} ${OBJS}
-			${RN} ${NAME}
-
-main:		$(NAME)
-			${CC} -I ${DIRINC} -I ${DIRLIB} ${NAME} main.c
-
-all:		$(NAME)
-
-clean:
-			${RM} ${OBJS}
-			cd ${DIRLIB} && ${MAKE} clean
-
-fclean:		clean
-			${RM} $(NAME)
-			cd ${DIRLIB} && ${MAKE} fclean
-
-re:			fclean all
-
-.PHONY:		all clean fclean re
+re : fclean all

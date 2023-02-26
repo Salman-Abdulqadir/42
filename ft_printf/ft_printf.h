@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 13:42:44 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/11 14:56:06 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/24 11:50:32 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "./libft/libft.h"
+#include <stdarg.h>
 
-char			*ft_itoa(int n);
+int	print_char(char c);
 
-void			ft_putchar_fd(char c, int fd);
+// int	print_hex(int	c);
 
-void			ft_putendl_fd(char *s, int fd);
+int	print_int(int c);
 
-void			ft_putnbr_fd(int n, int fd);
+int	print_str(char *str);
 
 void			ft_putstr_fd(char *s, int fd);
 
