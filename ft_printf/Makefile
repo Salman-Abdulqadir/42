@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+         #
+#    By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 12:40:19 by sabdulqa          #+#    #+#              #
-#    Updated: 2023/02/26 17:06:43 by sabdulqa         ###   ########.fr        #
+#    Updated: 2023/02/27 17:12:51 by sabdulqa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ LIBFT = libft/libft.a
 
 NAME = libftprintf.a
 
-SRCS =  src/print_hex.c src/print_int.c src/print_str.c src/print_ptr.c
+SRCS =  src/print_hex.c src/print_int.c src/print_str.c src/print_ptr.c ft_printf.c
 		
 CC = gcc
 

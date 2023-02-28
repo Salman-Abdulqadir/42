@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 14:48:54 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/26 17:07:13 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/27 17:47:21 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,13 @@ int	print_int(int c)
 	int	i;
 	int	n;
 
-	n = c;
+	n =  c;
 	i = 0;
+	if (n <= 0)
+	{
+		n *= -1;
+		i++;
+	}
 	while (n > 0)
 	{
 		n /= 10;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 13:21:31 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/26 16:41:55 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/27 17:51:54 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,8 @@ int	ft_printf(const char *placeholder, ...)
 	return (counter);
 }
 
+#include <stdio.h>
 int main(){
-	char *test = "salman abu";
-
-	ft_printf("%s, %p", test, ft_printf("%s", test));
+	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
 	return 0;
 }

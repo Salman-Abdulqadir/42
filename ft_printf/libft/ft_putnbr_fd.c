@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 18:16:57 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/01/17 18:17:07 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/27 17:41:01 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd( int n, int fd)
 {
 	if (n == -2147483648)
 	{
