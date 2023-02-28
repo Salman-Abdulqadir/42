@@ -1,29 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   print_unsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 13:42:44 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/28 15:57:30 by sabdulqa         ###   ########.fr       */
+/*   Created: 2023/02/28 15:52:16 by sabdulqa          #+#    #+#             */
+/*   Updated: 2023/02/28 16:17:34 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../ft_printf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "./libft/libft.h"
-# include <stdarg.h>
+void	ft_putunsigned(long n)
+{
+	if (n < 10)
+	{
+		ft_putchar_fd(n + '0', 1);
+		return ;
+	}
+	else
+		ft_putunsigned(n / 10);
+	ft_putunsigned(n % 10);
+}
 
-int	print_char(char c);
-int	print_hex(unsigned long long n, char type);
-int	print_int(int c);
-int	print_str(char *str);
-int	print_ptr(void *ptr);
-int print_unsigned(unsigned int c);
-int	ft_printf(const char *placeholder, ...);
+int	print_unsigned(unsigned int c)
+{
+	int				i;
+	unsigned int	n;
 
-#endif
+	n = c;
+	i = 0;
+
+	if (n == 0)
+	{
+		ft_putchar_fd('0', 1);
+		return (1);
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	ft_putunsigned(c);
+	return (i);
+}

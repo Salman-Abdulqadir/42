@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabdulqa <sabdulqa@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 14:48:54 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/27 17:47:21 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/28 15:20:23 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	print_int(int c)
 	i = 0;
 	if (n <= 0)
 	{
+		if (n == -2147483648)
+			n += 1;
 		n *= -1;
 		i++;
 	}
@@ -35,7 +37,7 @@ int	print_int(int c)
 
 // #include <stdio.h>
 // int main(){
-// 	int number = print_int(1234567890);
+// 	int number = print_int(-2147483648);
 // 	printf("%d", number);
 // 	return 0;
 // }
