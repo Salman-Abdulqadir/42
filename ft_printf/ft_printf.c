@@ -6,7 +6,7 @@
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 13:21:31 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/28 16:08:50 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:15:48 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	check_placeholder(char format, va_list args)
 	if (format == 'c')
 	{
 		ft_putchar_fd(va_arg(args, int), 1);
-		return (1);	
+		return (1);
 	}
 	else if (format == 's')
 		return (print_str(va_arg(args, char *)));
@@ -32,12 +32,12 @@ int	check_placeholder(char format, va_list args)
 	else if (format == '%')
 	{
 		ft_putchar_fd('%', 1);
-		return (1);	
+		return (1);
 	}
 	else
 	{
 		ft_putchar_fd(format, 1);
-		return (0);
+		return (1);
 	}
 }
 
@@ -64,10 +64,3 @@ int	ft_printf(const char *placeholder, ...)
 	}
 	return (counter);
 }
-
-// #include <limits.h>
-// #include <stdio.h>
-// int main(){
-// 	printf("\n%d\n", ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX));
-// 	return 0;
-// }

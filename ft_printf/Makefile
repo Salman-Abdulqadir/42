@@ -6,7 +6,7 @@
 #    By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 12:40:19 by sabdulqa          #+#    #+#              #
-#    Updated: 2023/02/28 15:59:02 by sabdulqa         ###   ########.fr        #
+#    Updated: 2023/03/04 11:46:54 by sabdulqa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,6 @@ CC = gcc
 
 CFLAGS = -c -Wall -Wextra -Werror
 
-INCLUDES = -I./includes
-
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
@@ -32,8 +30,7 @@ $(NAME): $(OBJS)
 all : $(NAME)
 
 clean :
-	$(MAKE) clean -C ./libft
-	rm -rf $(SURPL_O) 
+	$(MAKE) clean -C ./libft 
 	rm -rf $(OBJS)
 
 fclean : clean

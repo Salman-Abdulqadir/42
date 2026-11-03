@@ -6,7 +6,7 @@
 /*   By: sabdulqa <sabdulqa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:52:16 by sabdulqa          #+#    #+#             */
-/*   Updated: 2023/02/28 16:17:34 by sabdulqa         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:46:11 by sabdulqa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	print_unsigned(unsigned int c)
 
 	n = c;
 	i = 0;
-
 	if (n == 0)
 	{
 		ft_putchar_fd('0', 1);
